@@ -12,7 +12,6 @@
 #define NAV 1
 #define SYMBOLS 2
 #define NUMBERS 3
-#define SPECIAL 4
 
 #define LAUNCHER (LG(SPACE))
 #define CTRL_TAB (LC(TAB))
@@ -40,24 +39,16 @@
       compatible = "zmk,battery-nrf-vddh";
       label = "VBATT";
   };
-
-  conditional_layers {
-      compatible = "zmk,conditional-layers";
-      tri_layer {
-          if-layers = <1 2>;
-          then-layer = <3>;
-      };
+  
+  combos {
+        compatible = "zmk,combos";
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp RET>;
+        };
   };
-
-  behaviors {
-      td0: tap_dance_smart_shift {
-          compatible = "zmk,behavior-tap-dance";
-          label = "TAP_DANCE_SMART_SHIFT";
-          #binding-cells = <0>;
-          tapping-term-ms = <200>;
-          bindings = <&sk LSHIFT>, <&caps_word>;
-      };
-  };
+        
 
   keymap {
     compatible = "zmk,keymap";
