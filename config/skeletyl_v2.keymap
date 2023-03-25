@@ -17,6 +17,42 @@
             key-positions = <27 28>;
             bindings = <&kp RET>;
         };
+        
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_skctrl {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&sk LCTRL>;
+        };
+
+        combo_skalt {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&sk LALT>;
+        };
+
+        combo_skwin {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&sk LGUI>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_alt {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp LALT>;
+        };
   };
         
 
